@@ -235,27 +235,157 @@
   font-size: 0.9em;
 }
 
-@media (max-width: 768px) {
-  .dashboard-content {
-    padding: 20px;
-  }
-
-  .controls-bar {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .search-box {
-    max-width: 100%;
-  }
-
+/* Mobile Responsive Styles */
+@media (max-width: 1024px) {
   .contacts-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 15px 20px;
   }
 
   .header-content {
     flex-direction: column;
     gap: 15px;
     align-items: flex-start;
+  }
+
+  .dashboard-title {
+    font-size: 1.5em;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .admin-name {
+    font-size: 0.9em;
+  }
+
+  .logout-btn {
+    padding: 8px 20px;
+    font-size: 0.9em;
+  }
+
+  .dashboard-content {
+    padding: 20px 15px;
+  }
+
+  .controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .stats h2 {
+    font-size: 1.5em;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+
+  .search-input {
+    padding: 10px 16px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .refresh-btn {
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-name {
+    font-size: 1.2em;
+  }
+
+  .card-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .status-badge {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding: 12px 15px;
+  }
+
+  .dashboard-title {
+    font-size: 1.3em;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .logout-btn {
+    width: 100%;
+  }
+
+  .dashboard-content {
+    padding: 15px 10px;
+  }
+
+  .stats h2 {
+    font-size: 1.3em;
+  }
+
+  .contact-card {
+    padding: 16px;
+  }
+
+  .contact-name {
+    font-size: 1.1em;
+  }
+
+  .field-label {
+    font-size: 0.8em;
+  }
+
+  .field-value {
+    font-size: 0.95em;
+  }
+
+  .message-text {
+    padding: 10px;
+    font-size: 0.95em;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .dashboard-header {
+    position: relative;
+  }
+
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-actions {
+    width: auto;
+    flex-direction: row;
   }
 }

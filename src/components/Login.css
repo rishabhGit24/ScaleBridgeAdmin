@@ -97,3 +97,48 @@
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-box {
+    padding: 40px 30px;
+    max-width: 100%;
+  }
+
+  .login-title {
+    font-size: 2.2em;
+  }
+
+  .login-subtitle {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+
+  .login-input {
+    padding: 12px 16px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .login-btn {
+    padding: 14px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 30px 20px;
+  }
+
+  .login-title {
+    font-size: 1.8em;
+  }
+
+  .login-subtitle {
+    font-size: 1em;
+  }
+}
