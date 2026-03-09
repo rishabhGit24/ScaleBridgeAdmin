@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 5000;
 // CORS configuration
 const allowedOrigins = [
   "https://scale-bridge.vercel.app",
+  "https://scale-bridge-admin.vercel.app",
   "http://localhost:5173",
   "http://localhost:5174",
   "http://localhost:3000",
@@ -25,10 +26,10 @@ app.use((req, res, next) => {
     // Allow any localhost origin for development
     res.setHeader("Access-Control-Allow-Origin", origin);
   } else {
-    // Fallback to allow the frontend domain
+    // Fallback to allow the admin frontend domain
     res.setHeader(
       "Access-Control-Allow-Origin",
-      "https://scale-bridge-frontend.vercel.app",
+      "https://scale-bridge-admin.vercel.app",
     );
   }
 
